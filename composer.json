@@ -1,35 +1,37 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "spatie/laravel-dashboard-attendances-tile",
+    "description": "A tile for laravel-dashboard that displays who is at the office today",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "spatie",
+        "laravel-dashboard-attendances-tile"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/spatie/laravel-dashboard-attendances-tile",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://:vendor.be",
+            "name": "Ruben Van Assche",
+            "email": "ruben@spatie.be",
+            "homepage": "https://spatie.be",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0|^7.4",
-        "spatie/laravel-dashboard": "^2.0"
+        "php": "^8.0",
+        "laravel/framework": "^8.0",
+        "spatie/laravel-dashboard": "^2.0",
+        "spatie/laravel-google-calendar": "^2.5|^3.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\MyTile\\": "src"
+            "Spatie\\AttendancesTile\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\MyTile\\Tests\\": "tests"
+            "Spatie\\AttendancesTile\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\MyTile\\MyTileServiceProvider"
+                "Spatie\\AttendancesTile\\AttendancesTileServiceProvider"
             ]
         }
     },

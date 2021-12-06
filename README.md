@@ -1,12 +1,10 @@
-# A short description of the tile
+# A tile to display who will be at the office
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor/:package_name/run-tests?label=tests)](https://github.com/:vendor/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-dashboard-attendances-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-attendances-tile)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-dashboard-attendances-tile/run-tests?label=tests)](https://github.com/spatie/laravel-dashboard-attendances-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-dashboard-attendances-tile.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-dashboard-attendances-tile)
 
-A friendly explanation of what your tile does.
-
-This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-dashboard).
+This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-dashboard) to display who is at the office and who is not.
 
 ## Support us
 
@@ -16,23 +14,9 @@ We invest a lot of resources into creating [best in class open source packages](
 
 We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
-## Installation
+## Documentation
 
-You can install the package via composer:
-
-```bash
-composer require :vendor/:package_name
-```
-
-## Usage
-
-In your dashboard view you use the `livewire:my-tile` component.
-
-```html
-<x-dashboard>
-    <livewire:my-tile position="e7:e16" />
-</x-dashboard>
-```
+All documentation is available [on our documentation site](https://docs.spatie.be/laravel-dashboard).
 
 ## Testing
 
@@ -50,7 +34,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email ruben@spatie instead of using the issue tracker.
 
 ## Credits
 

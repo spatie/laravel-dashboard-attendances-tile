@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\MyTile\Tests;
+namespace Spatie\AttendancesTile\Tests;
 
 use PHPUnit\Framework\TestCase;
 
