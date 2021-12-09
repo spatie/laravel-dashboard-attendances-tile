@@ -37,10 +37,12 @@ class FetchAttendancesCommand extends Command
                     $message = "Could not load calendar `{$email}`, maybe we do not have access to it?";
 
                     $this->error($message);
-                    Log::error($message);
+                    Log::info($message);
 
                     continue;
                 }
+
+                throw $exception;
             }
 
             $daysAtOffice = collect($events)
