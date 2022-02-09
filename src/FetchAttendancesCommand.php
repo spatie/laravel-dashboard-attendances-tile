@@ -25,7 +25,7 @@ class FetchAttendancesCommand extends Command
 
         $this->info("Fetching attendances from {$startOfWeek->format('d-m-Y')} until {$endOfWeek->format('d-m-Y')}");
 
-        $days = collect(CarbonPeriod::create($startOfWeek, $endOfWeek))->mapWithKeys(fn(Carbon $date) => [
+        $days = collect(CarbonPeriod::create($startOfWeek, $endOfWeek))->mapWithKeys(fn (Carbon $date) => [
             $date->format('d-m-Y') => [],
         ]);
 
@@ -46,17 +46,17 @@ class FetchAttendancesCommand extends Command
             }
 
             $daysAtOffice = collect($events)
-                ->filter(fn(Event $event) => Str::of($event->summary)->lower()->contains(config('dashboard.tiles.attendances.keywords.office', [])))
-                ->flatMap(fn(Event $event) => array_map(
-                    fn(Carbon $carbon) => $carbon->format('d-m-Y'),
+                ->filter(fn (Event $event) => Str::of($event->summary)->lower()->contains(config('dashboard.tiles.attendances.keywords.office', [])))
+                ->flatMap(fn (Event $event) => array_map(
+                    fn (Carbon $carbon) => $carbon->format('d-m-Y'),
                     $this->resolveDatesForEvent($event, $startOfWeek, $endOfWeek)
                 ))
                 ->unique();
 
             $daysAtHome = collect($events)
-                ->filter(fn(Event $event) => Str::of($event->summary)->lower()->contains(config('dashboard.tiles.attendances.keywords.home', [])))
-                ->flatMap(fn(Event $event) => array_map(
-                    fn(Carbon $carbon) => $carbon->format('d-m-Y'),
+                ->filter(fn (Event $event) => Str::of($event->summary)->lower()->contains(config('dashboard.tiles.attendances.keywords.home', [])))
+                ->flatMap(fn (Event $event) => array_map(
+                    fn (Carbon $carbon) => $carbon->format('d-m-Y'),
                     $this->resolveDatesForEvent($event, $startOfWeek, $endOfWeek)
                 ))
                 ->unique();
